@@ -4,6 +4,7 @@ import ContacUsImg from "@/assets/contactus.jpg";
 // import ContacUsImg from "@/assets/ContactUsPageGraphic.png";
 import { useForm } from "react-hook-form";
 import HText from "@/shared/h-text";
+import ActionButton from "@/shared/action-button";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
@@ -110,12 +111,13 @@ export default function ContactUs({ setSelectedPage }: Props) {
                     "Max length is 2000 char."}
                 </p>
               )}
-              <button
+                <ActionButton setSelectedPage={setSelectedPage}>Submit</ActionButton>
+              {/* <button
                 type="submit"
                 className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
               >
                 SUBMIT
-              </button>
+              </button> */}
             </form>
           </motion.div>
           <motion.div
